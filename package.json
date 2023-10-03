@@ -1,0 +1,27 @@
+{
+  "name": "server-backend",
+  "version": "1.0.0",
+  "description": "It's is a backend part using Node and Express js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "Node",
+    "MongoDB",
+    "Expree",
+    "JWT"
+  ],
+  "author": "Shaurya Pratap Singh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.5.3",
+    "morgan": "^1.10.0"
+  }
+}
