@@ -15,7 +15,7 @@ const productSchema = new Schema({
 
     rating:{type:Number, required:true,min :[0,'wrong rating entered'], max :[5,'max rating entered']},
 
-});
+},{timestamps:true});
 
 const virtual = productSchema.virtual('id');
 

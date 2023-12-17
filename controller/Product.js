@@ -12,8 +12,12 @@ exports.createProduct = async (req, res) => {
 
 exports.fetchAllProducts = async (req, res) => {
   try {
-    let query = Product.find({});
-    let totalProductCountQuery = Product.find({});
+    let condition ={};
+    if(!req.query.admin){
+      condition.deleted={$ne: true}
+    }
+    let query = Product.find(condition);
+    let totalProductCountQuery = Product.find(condition);
     if (req.query.category) {
       query = query.find({ category: req.query.category });
       totalProductCountQuery = totalProductCountQuery.find({
